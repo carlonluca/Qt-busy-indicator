@@ -18,7 +18,7 @@ public:
 
     void setIndicatorStyle(IndicatorStyle);
     void setColor(QColor color);
-    const IndicatorStyle indicatorStyle() const;
+    IndicatorStyle indicatorStyle() const;
 
 signals:
 

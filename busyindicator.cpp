@@ -10,10 +10,6 @@ BusyIndicator::BusyIndicator(QWidget *parent) :
     startAngle(0),
     m_style(StyleArc)
 {
-    QSizePolicy policy(QSizePolicy::Preferred, QSizePolicy::Fixed);
-    policy.setHeightForWidth(true);
-    setSizePolicy(policy);
-
     fillColor = palette().color(QPalette::WindowText);
 
     timer.setInterval(50);
@@ -39,7 +35,7 @@ void BusyIndicator::setColor(QColor color)
     fillColor = color;
 }
 
-const BusyIndicator::IndicatorStyle BusyIndicator::indicatorStyle() const
+BusyIndicator::IndicatorStyle BusyIndicator::indicatorStyle() const
 {
     return m_style;
 }
